@@ -41,17 +41,17 @@
 
 @font-face {
     font-family: lato-bold;
-    src: url(/fonts/Lato/Lato-Bold.ttf);
+    src: url(../fonts/Lato/Lato-Bold.ttf);
 }
 
 @font-face {
     font-family: lato-regular;
-    src: url(/fonts/Lato/Lato-Regular.ttf);
+    src: url(../fonts/Lato/Lato-Regular.ttf);
 }
 
 @font-face {
     font-family: eurofurence;
-    src: url(/fonts/eurofurence/eurof55.ttf);
+    src: url(../fonts/eurofurence/eurof55.ttf);
 }
 
 /* BASICS */
@@ -375,8 +375,12 @@ footer {
 
     .main-nav-list li a {
         width: 100%;
-        /* height: 0; */
     }
+
+    /* .main-nav-list>*:hover {
+        box-shadow: 0 6px 0 0 var(--clr5);
+        color: var(--clr5);
+    } */
 
     .main-nav-list {
         background-color: var(--clr2);
@@ -387,7 +391,10 @@ footer {
         flex-direction: column;
         width: 100vw;
         user-select: none;
-        /* height:0; */
+        transition: max-height 0.4s;
+        transform-origin: top;
+        max-height: 0;
+        overflow: hidden;
     }
 
     .nav-bar {
